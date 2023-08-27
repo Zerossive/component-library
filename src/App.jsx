@@ -335,8 +335,8 @@ function App() {
 								setup, and by default close when clicking the background.
 							</p>
 							<div className='not-prose flex flex-wrap items-center gap-3'>
-								<Modal modal={modal} alt rounded blur noPadding>
-									<article className='flex flex-col items-start gap-3 p-6'>
+								<Modal modal={modal} alt rounded blur>
+									<article className='flex flex-col items-start gap-3'>
 										<h1 className='text-2xl font-bold'>Modal</h1>
 										<p>This is a modal.</p>
 										<p>

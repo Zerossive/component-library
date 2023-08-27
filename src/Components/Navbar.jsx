@@ -28,10 +28,10 @@ const Navbar = (props) => {
 	return (
 		<nav
 			className={twMerge([
-				'relative z-30 flex w-full flex-col items-center bg-secondary font-bold md:flex-row md:px-3 lg:px-12',
+				'relative z-30 flex w-full flex-col items-center bg-crust font-bold md:flex-row md:px-3 lg:px-12',
 				caps && 'uppercase',
 				transparent && 'bg-transparent',
-				border && 'border-b-2 border-primary',
+				border && 'border-b-2 border-surface',
 				sticky && 'sticky top-0',
 				stickyMobile && 'sticky top-0 md:relative',
 				linksLeft && 'justify-between',
@@ -40,7 +40,7 @@ const Navbar = (props) => {
 		>
 			<div
 				className={twMerge([
-					'flex w-full items-center justify-between gap-6 bg-secondary px-3 py-2 md:px-0',
+					'flex w-full items-center justify-between gap-6 bg-crust px-3 py-2 md:px-0',
 					linksLeft && 'w-auto',
 					transparent && 'bg-transparent',
 				])}
@@ -69,7 +69,7 @@ const Navbar = (props) => {
 				{/* Menu Button */}
 				<svg
 					className={twMerge([
-						'h-10 w-12 cursor-pointer fill-primary p-2 duration-150 ease-in-out hover:opacity-80 active:scale-90 active:opacity-100 md:hidden',
+						'h-10 w-12 cursor-pointer fill-surface p-2 duration-150 ease-in-out hover:opacity-80 active:scale-90 active:opacity-100 md:hidden',
 					])}
 					viewBox='0 0 100 100'
 					preserveAspectRatio='none'
@@ -82,11 +82,11 @@ const Navbar = (props) => {
 			</div>
 			<ul
 				className={twMerge([
-					'absolute bottom-0 -z-10 flex h-max w-full flex-col items-center bg-secondary opacity-0 duration-150 ease-in-out md:static md:z-0 md:w-auto md:flex-row md:gap-3 md:opacity-100',
+					'absolute bottom-0 -z-10 flex h-max w-full flex-col items-center bg-mantle opacity-0 duration-150 ease-in-out md:static md:z-0 md:w-auto md:flex-row md:gap-3 md:bg-crust md:opacity-100',
 					showLinks && 'translate-y-full opacity-100 md:translate-y-0',
 					linksLeft && 'order-first justify-start',
 					transparent && 'bg-transparent',
-					transparent && showLinks && 'bg-secondary md:bg-transparent',
+					transparent && showLinks && 'bg-base md:bg-transparent',
 				])}
 			>
 				{links.map((link) => (
@@ -94,7 +94,7 @@ const Navbar = (props) => {
 						key={link.title}
 						className={twMerge([
 							'w-full p-3 md:p-0',
-							border && 'border-b-2 border-primary first:border-t-2 md:border-none',
+							border && 'border-b-2 border-surface first:border-t-2 md:border-none',
 							transparent && 'bg-transparent',
 						])}
 					>
@@ -103,8 +103,10 @@ const Navbar = (props) => {
 								fullWidth
 								alt
 								caps
-								small2
-								className={leftAlign && 'justify-start px-3'}
+								rounded
+								className={
+									leftAlign && 'justify-start border-transparent px-3 md:bg-crust'
+								}
 								transparent={transparent}
 							>
 								{link.title}

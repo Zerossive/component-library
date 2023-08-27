@@ -40,21 +40,21 @@ const Toggle = (props) => {
 			<button
 				className={twMerge([
 					// Default Style
-					'group relative h-8 w-16 bg-primary duration-150',
+					'group relative h-8 w-16 bg-surface duration-150',
 
 					// Alternate General Styles
-					alt && 'bg-background outline outline-1 outline-primary',
+					alt && 'bg-crust outline outline-1 outline-surface',
 
 					// Base Properties
 					small && 'h-4 w-8',
 					large && 'h-12 w-24',
 					rounded && 'rounded-md',
 					pill && 'rounded-full',
-					border && 'outline outline-2 outline-accent',
+					border && 'outline outline-2 outline-primary',
 
 					// Toggled State
-					toggled && 'bg-accent bg-opacity-50',
-					alt && toggled && 'bg-secondary bg-opacity-100',
+					toggled && 'bg-primary bg-opacity-50',
+					alt && toggled && 'bg-surface bg-opacity-100',
 
 					// Custom Styles
 					className,
@@ -64,18 +64,18 @@ const Toggle = (props) => {
 				<div
 					className={twMerge([
 						// Default Style
-						'absolute left-0 top-1/2 aspect-square h-full w-auto -translate-y-1/2 bg-accent transition-all duration-150',
+						'absolute left-0 top-1/2 aspect-square h-full w-auto -translate-y-1/2 bg-primary transition-all duration-150',
 						toggled && 'translate-x-full',
 
 						// Alternate General Styles
-						alt && 'bg-primary outline outline-1 outline-primary',
+						alt && 'bg-overlay outline outline-1 outline-surface',
 
 						// Base Properties
 						rounded && 'rounded-md',
 						pill && 'rounded-full',
 						overflow && 'scale-125',
 						border && 'scale-105',
-						gradient && 'bg-gradient-to-tr from-accent to-purple-400 text-secondary',
+						gradient && 'bg-gradient-to-tr from-primary to-purple-400',
 
 						// Effects
 						scale && 'group-hover:scale-125',

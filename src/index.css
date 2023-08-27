@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 html {
-	@apply prose-slate bg-background text-text accent-accent;
+	@apply prose-slate text-light accent-primary;
 	-webkit-tap-highlight-color: transparent;
 }
