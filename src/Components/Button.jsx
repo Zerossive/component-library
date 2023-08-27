@@ -11,7 +11,7 @@ const Button = (props) => {
 		gradient = false,
 		gradientText = false,
 		border = false,
-		noBackground = false,
+		transparent = false,
 		caps = false,
 		fullWidth = false,
 		square = false,
@@ -40,10 +40,10 @@ const Button = (props) => {
 					'border border-transparent bg-secondary hover:border-accent hover:text-accent',
 
 				// Base Properties
-				noBackground && 'bg-transparent text-accent',
-				gradient && 'bg-gradient-to-tr from-accent to-rose-400 text-secondary',
+				transparent && 'bg-transparent text-accent',
+				gradient && 'bg-gradient-to-tr from-accent to-purple-400 text-secondary',
 				gradientText &&
-					'bg-gradient-to-tr from-accent to-rose-400 bg-clip-text text-transparent',
+					'bg-gradient-to-tr from-accent to-purple-400 bg-clip-text text-transparent',
 				border && 'border border-accent',
 				rounded && 'rounded-md', //adjust complex effects below when changing rounded amount
 				pill && 'rounded-full',
@@ -59,7 +59,7 @@ const Button = (props) => {
 
 				// Complex Style Modifiers
 				changeText && 'overflow-hidden',
-				gradientBorder && 'bg-gradient-to-tr from-accent to-rose-400 p-[1px]', // pading effects border width
+				gradientBorder && 'bg-gradient-to-tr from-accent to-purple-400 p-[1px]', // pading effects border width
 				simulate &&
 					'border-b border-blue-400 bg-blue-500 [box-shadow:0_10px_0_0_#1b6ff8,0_15px_0_0_#1b70f841] active:translate-y-1 active:border-b-0 active:[box-shadow:0_0px_0_0_#1b6ff8,0_0px_0_0_#1b70f841]',
 
@@ -84,7 +84,7 @@ const Button = (props) => {
 			{changeText && (
 				<div
 					className={twMerge([
-						'absolute left-0 top-0 flex h-full w-full translate-y-full items-center justify-center bg-primary opacity-0 duration-150 group-hover:-translate-y-0 group-hover:opacity-100',
+						'absolute left-0 top-0 flex h-full w-full translate-y-full items-center justify-center bg-primary text-text opacity-0 duration-150 group-hover:-translate-y-0 group-hover:opacity-100',
 					])}
 				>
 					{changeText}
@@ -93,7 +93,8 @@ const Button = (props) => {
 			{gradientBorder && (
 				<div
 					className={twMerge([
-						'grow bg-primary px-4 py-3',
+						'grow bg-secondary px-4 py-3',
+						small && 'px-2 py-1',
 						rounded && 'rounded-md',
 						pill && 'rounded-full',
 					])}

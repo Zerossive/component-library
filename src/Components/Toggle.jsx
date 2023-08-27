@@ -75,7 +75,7 @@ const Toggle = (props) => {
 						pill && 'rounded-full',
 						overflow && 'scale-125',
 						border && 'scale-105',
-						gradient && 'bg-gradient-to-tr from-accent to-rose-400 text-secondary',
+						gradient && 'bg-gradient-to-tr from-accent to-purple-400 text-secondary',
 
 						// Effects
 						scale && 'group-hover:scale-125',

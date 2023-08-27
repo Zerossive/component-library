@@ -33,8 +33,8 @@ const Panel = (props) => {
 				rounded && 'rounded-xl',
 				pill && 'items-center rounded-full px-16',
 				border && 'border border-accent',
-				gradient && 'bg-gradient-to-tr from-accent to-rose-400 text-secondary',
-				square && 'aspect-square grow-0 items-center justify-center',
+				gradient && 'bg-gradient-to-tr from-accent to-purple-400 text-secondary',
+				square && 'aspect-square items-center justify-center',
 				shadow && 'shadow-lg shadow-[rgba(0,0,0,0.5)]',
 				blur && 'bg-opacity-50 backdrop-blur',
 
@@ -42,7 +42,7 @@ const Panel = (props) => {
 				scale && 'hover:scale-105 active:scale-105',
 
 				// Complex Style Modifiers
-				gradientBorder && 'bg-gradient-to-tr from-accent to-rose-400 p-[1px]',
+				gradientBorder && 'bg-gradient-to-tr from-accent to-purple-400 p-[1px]',
 
 				// Custom Styles
 				className,
@@ -64,7 +64,7 @@ const Panel = (props) => {
 			{gradientBorder && (
 				<div
 					className={twMerge([
-						'h-full w-full bg-primary px-4 py-3',
+						'h-full w-full bg-secondary px-4 py-3',
 						rounded && 'rounded-xl',
 						pill && 'rounded-full',
 					])}

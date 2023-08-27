@@ -28,7 +28,7 @@ const Navbar = (props) => {
 	return (
 		<nav
 			className={twMerge([
-				'relative z-30 flex w-full flex-col bg-secondary font-bold md:flex-row md:px-12',
+				'relative z-30 flex w-full flex-col items-center bg-secondary font-bold md:flex-row md:px-3 lg:px-12',
 				caps && 'uppercase',
 				transparent && 'bg-transparent',
 				border && 'border-b-2 border-primary',
@@ -40,8 +40,9 @@ const Navbar = (props) => {
 		>
 			<div
 				className={twMerge([
-					'flex w-full items-center justify-between gap-6 bg-secondary px-3 py-2',
+					'flex w-full items-center justify-between gap-6 bg-secondary px-3 py-2 md:px-0',
 					linksLeft && 'w-auto',
+					transparent && 'bg-transparent',
 				])}
 			>
 				{/* Logo */}
@@ -55,7 +56,7 @@ const Navbar = (props) => {
 				{/* Title */}
 				<h1
 					className={twMerge([
-						'grow text-center text-2xl',
+						'grow text-center text-lg md:text-xl lg:text-2xl',
 						leftAlign && 'text-left',
 						titleClick && 'cursor-pointer',
 						linksLeft && 'md:order-first md:grow-0',
@@ -81,21 +82,31 @@ const Navbar = (props) => {
 			</div>
 			<ul
 				className={twMerge([
-					'absolute bottom-0 -z-10 flex h-max w-full flex-col items-center bg-secondary duration-150 md:static md:z-0 md:w-auto md:flex-row',
-					showLinks && 'translate-y-full md:translate-y-0',
+					'absolute bottom-0 -z-10 flex h-max w-full flex-col items-center bg-secondary opacity-0 duration-150 ease-in-out md:static md:z-0 md:w-auto md:flex-row md:gap-3 md:opacity-100',
+					showLinks && 'translate-y-full opacity-100 md:translate-y-0',
 					linksLeft && 'order-first justify-start',
+					transparent && 'bg-transparent',
+					transparent && showLinks && 'bg-secondary md:bg-transparent',
 				])}
 			>
 				{links.map((link) => (
 					<li
 						key={link.title}
 						className={twMerge([
-							'w-full p-3',
+							'w-full p-3 md:p-0',
 							border && 'border-b-2 border-primary first:border-t-2 md:border-none',
+							transparent && 'bg-transparent',
 						])}
 					>
 						<a href={link.url}>
-							<Button fullWidth alt caps className={leftAlign && 'justify-start'}>
+							<Button
+								fullWidth
+								alt
+								caps
+								small2
+								className={leftAlign && 'justify-start px-3'}
+								transparent={transparent}
+							>
 								{link.title}
 							</Button>
 						</a>
