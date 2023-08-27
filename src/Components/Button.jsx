@@ -1,6 +1,35 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
+/**
+ * Render a button component with various styling options and effects.
+ *
+ * @param {Object} props - The properties of the button component.
+ * @param {ReactNode} props.children - The child elements of the button.
+ * @param {boolean} [props.cta=false] - Determines if the button is a call-to-action button.
+ * @param {boolean} [props.alt=false] - Determines if the button has an alternate style.
+ * @param {boolean} [props.rounded=false] - Determines if the button has rounded corners.
+ * @param {boolean} [props.pill=false] - Determines if the button has a pill shape.
+ * @param {boolean} [props.gradient=false] - Determines if the button has a gradient background.
+ * @param {boolean} [props.gradientText=false] - Determines if the button's text has a gradient effect.
+ * @param {boolean} [props.border=false] - Determines if the button has a border.
+ * @param {boolean} [props.transparent=false] - Determines if the button has a transparent background.
+ * @param {boolean} [props.caps=false] - Determines if the button's text is in uppercase.
+ * @param {boolean} [props.fullWidth=false] - Determines if the button spans the full width.
+ * @param {boolean} [props.square=false] - Determines if the button has a square shape.
+ * @param {boolean} [props.scale=false] - Determines if the button scales down when active.
+ * @param {boolean} [props.raise=false] - Determines if the button raises slightly when hovered or active.
+ * @param {boolean} [props.glow=false] - Determines if the button has a glowing effect.
+ * @param {string} [props.changeText=''] - The text that appears when the button is hovered.
+ * @param {boolean} [props.small=false] - Determines if the button has a small size.
+ * @param {boolean} [props.large=false] - Determines if the button has a large size.
+ * @param {boolean} [props.gradientBorder=false] - Determines if the button has a gradient border.
+ * @param {boolean} [props.underline=false] - Determines if the button has an underline effect.
+ * @param {boolean} [props.simulate=false] - Determines if the button simulates a specific effect.
+ * @param {Function} props.onClick - The function to be called when the button is clicked.
+ * @param {string} props.className - The custom class name for the button.
+ * @return {ReactNode} The rendered button component.
+ */
 const Button = (props) => {
 	const {
 		children,

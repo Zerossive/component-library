@@ -2,6 +2,23 @@ import React, { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import Button from './Button'
 
+/**
+ * Renders a navigation bar component.
+ *
+ * @param {object} props - The props object.
+ * @param {string} props.title - The title of the navigation bar.
+ * @param {function} props.titleClick - The click event handler for the title.
+ * @param {function} props.logoClick - The click event handler for the logo.
+ * @param {boolean} props.caps - Indicates if the navigation bar should be in uppercase.
+ * @param {boolean} props.transparent - Indicates if the navigation bar should be transparent.
+ * @param {boolean} props.leftAlign - Indicates if the title should be left-aligned.
+ * @param {boolean} props.border - Indicates if the navigation bar should have a border.
+ * @param {boolean} props.sticky - Indicates if the navigation bar should be sticky.
+ * @param {boolean} props.stickyMobile - Indicates if the navigation bar should be sticky on mobile devices.
+ * @param {boolean} props.linksLeft - Indicates if the links should be aligned to the left.
+ * @param {string} props.className - The additional class name for the navigation bar.
+ * @return {JSX.Element} The rendered navigation bar component.
+ */
 const Navbar = (props) => {
 	const {
 		title = '',
@@ -80,6 +97,8 @@ const Navbar = (props) => {
 					<rect x='0' y='75' width='100' height='25' />
 				</svg>
 			</div>
+
+			{/* Links */}
 			<ul
 				className={twMerge([
 					'absolute bottom-0 -z-10 flex h-max w-full flex-col items-center bg-mantle opacity-0 duration-150 ease-in-out md:static md:z-0 md:w-auto md:flex-row md:gap-3 md:bg-crust md:opacity-100',

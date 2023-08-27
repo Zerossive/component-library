@@ -1,6 +1,18 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
+/**
+ * Generates a sticky sidebar component.
+ *
+ * @param {Object} props - The props object.
+ * @param {ReactNode} props.children - The child components.
+ * @param {boolean} props.right - Flag indicating if sidebar is on the right side.
+ * @param {boolean} props.centerAlign - Flag indicating if sidebar is center-aligned.
+ * @param {boolean} props.rightAlign - Flag indicating if sidebar is right-aligned.
+ * @param {number} props.offset - The offset from the top of the page.
+ * @param {string} props.className - Additional class name for the component.
+ * @return {ReactNode} The rendered sticky sidebar component.
+ */
 const StickySidebar = (props) => {
 	const {
 		children,

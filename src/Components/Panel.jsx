@@ -1,6 +1,26 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
+/**
+ * Render a panel component with various styling options and effects.
+ *
+ * @param {object} props - The props object containing various options for the Panel component.
+ * @param {boolean} props.cta - Whether the Panel should have a CTA style.
+ * @param {boolean} props.alt - Whether the Panel should have an alternate style.
+ * @param {boolean} props.rounded - Whether the Panel should have rounded corners.
+ * @param {boolean} props.pill - Whether the Panel should have a pill shape.
+ * @param {boolean} props.gradient - Whether the Panel should have a gradient background.
+ * @param {boolean} props.border - Whether the Panel should have a border.
+ * @param {boolean} props.shadow - Whether the Panel should have a shadow.
+ * @param {boolean} props.scale - Whether the Panel should scale on hover.
+ * @param {boolean} props.square - Whether the Panel should have a square aspect ratio.
+ * @param {boolean} props.glow - Whether the Panel should have a glow effect.
+ * @param {boolean} props.gradientBorder - Whether the Panel should have a gradient border.
+ * @param {boolean} props.blur - Whether the Panel should have a blurred background.
+ * @param {string} props.className - Additional class names to be applied to the Panel.
+ * @param {ReactNode} props.children - The children elements of the Panel.
+ * @return {JSX.Element} The rendered Panel component.
+ */
 const Panel = (props) => {
 	const {
 		children,

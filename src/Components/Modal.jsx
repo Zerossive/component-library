@@ -1,6 +1,24 @@
 import React from 'react'
 import { twMerge } from 'tailwind-merge'
 
+/**
+ * Renders a modal component with customizable options.
+ *
+ * @param {Object} props - The properties for the modal component.
+ * @param {Object} props.modal - The ref to the modal component.
+ * @param {ReactNode} props.children - The content of the modal.
+ * @param {boolean} [props.fullWidth=false] - Whether the modal should take up the full width of the window.
+ * @param {boolean} [props.noMaxWidth=false] - Whether the modal should stretch to fit the content.
+ * @param {boolean} [props.alt=false] - Whether to use alternate styling for the modal.
+ * @param {boolean} [props.rounded=false] - Whether to apply rounded corners to the modal.
+ * @param {boolean} [props.border=false] - Whether to apply a border to the modal.
+ * @param {boolean} [props.gradient=false] - Whether to apply a gradient background to the modal.
+ * @param {boolean} [props.square=false] - Whether to make the modal a square shape.
+ * @param {boolean} [props.blur=false] - Whether to apply a blur effect to the modal.
+ * @param {boolean} [props.noPadding=false] - Whether to remove padding from the modal.
+ * @param {string} [props.className] - Additional CSS classes to apply to the modal.
+ * @returns {ReactNode} The rendered modal component.
+ */
 const Modal = (props) => {
 	const {
 		modal,

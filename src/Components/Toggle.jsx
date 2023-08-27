@@ -1,6 +1,27 @@
 import React, { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
+/**
+ * Generates a function comment for the given function body.
+ *
+ * @param {Object} props - The props object containing the function parameters.
+ * @param {string} props.label - The label for the toggle.
+ * @param {boolean} props.labelTop - Whether the label should be positioned on top of the toggle.
+ * @param {boolean} props.alt - Whether to use alternate general styles.
+ * @param {boolean} props.rounded - Whether the toggle should have rounded corners.
+ * @param {boolean} props.pill - Whether the toggle should have a pill shape.
+ * @param {boolean} props.gradient - Whether to use a gradient background for the toggle.
+ * @param {boolean} props.border - Whether to add an outline border to the toggle.
+ * @param {boolean} props.scale - Whether the toggle should scale on hover.
+ * @param {boolean} props.overflow - Whether the toggle should overflow its container.
+ * @param {boolean} props.small - Whether the toggle should be small.
+ * @param {boolean} props.large - Whether the toggle should be large.
+ * @param {boolean} props.defaultOn - Whether the toggle should be on by default.
+ * @param {boolean} props.labelClick - Whether clicking on the label should toggle the switch.
+ * @param {Function} props.onClick - The onClick event handler function.
+ * @param {string} props.className - Additional CSS classes to apply to the toggle.
+ * @return {JSX.Element} The JSX element representing the toggle component.
+ */
 const Toggle = (props) => {
 	const {
 		label = '',
